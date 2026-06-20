@@ -141,7 +141,7 @@ class HeartMuLaGenPipeline:
                 model.decoder,
                 dynamic=True,
             )
-            print(f"Backbone and decoder compiled with backend={backend}, mode={self._compile_mode}")
+            print(f"Backbone and decoder compiled with eager backend!")
         except Exception as e:
             print(f"torch.compile failed ({e}), continuing without compilation")
             
