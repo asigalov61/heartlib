@@ -143,7 +143,7 @@ class HeartMuLaGenPipeline:
             )
             print(f"Backbone and decoder compiled with backend={backend}, mode={self._compile_mode}")
         except Exception as e:
-            warnings.warn(f"torch.compile failed ({e}), continuing without compilation")
+            print(f"torch.compile failed ({e}), continuing without compilation")
             
     @property
     def mula(self) -> HeartMuLa:
