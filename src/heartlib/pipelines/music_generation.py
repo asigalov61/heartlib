@@ -122,6 +122,7 @@ class HeartMuLaGenPipeline:
                 device_map=self.mula_device,
                 dtype=self.mula_dtype,
             )
+            self._apply_compile(self._mula)
             self._codec = HeartCodec.from_pretrained(
                 self.codec_path,
                 device_map=self.codec_device,
